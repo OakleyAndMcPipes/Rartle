@@ -1,6 +1,6 @@
 export function getWordOfTheDay() {
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-  const firstDate = new Date(2022, 1, 1).setHours(0,0,0,0);
+  const firstDate = new Date(2022, 1, 21).setHours(0,0,0,0);
   const secondDate = new Date().setHours(0,0,0,0);
   let diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
   while (diffDays > allWords.length) {
@@ -10,6 +10,8 @@ export function getWordOfTheDay() {
 }
 
 export const allWords = [
+  'salvo',
+  'pissy',
   'snozy',
   'rarts',
   'packs',
@@ -30,7 +32,6 @@ export const allWords = [
   'tinny',
   'missy',
   'flare',
-  'blosh',
   'penos',
   'balls',
   'andre',
@@ -55,7 +56,5 @@ export const allWords = [
   'stink',
   'tramp',
   'ponds',
-  'pissy',
-  'salvo',
   'shots'
 ]
