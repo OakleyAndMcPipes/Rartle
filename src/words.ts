@@ -11,6 +11,7 @@ export function getWordOfTheDay() {
 
 export const allWords = [
   'salvo',
+  '84npd',
   'pissy',
   'snozy',
   'rarts',
@@ -29,6 +30,7 @@ export const allWords = [
   'fryup',
   'goats',
   'voice',
+  'honks',
   'tinny',
   'missy',
   'flare',

@@ -10,6 +10,7 @@ defineEmits<{
 }>()
 
 const rows = [
+  '123456780'.split(''),
   'qwertyuiop'.split(''),
   'asdfghjkl'.split(''),
   ['Enter', ...'zxcvbnm'.split(''), 'Backspace']
