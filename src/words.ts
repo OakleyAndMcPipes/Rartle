@@ -1,6 +1,6 @@
 export function getWordOfTheDay() {
   const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-  const firstDate = new Date(2022, 1, 21).setHours(0,0,0,0);
+  const firstDate = new Date(2022, 1, 22).setHours(0,0,0,0);
   const secondDate = new Date().setHours(0,0,0,0);
   let diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
   while (diffDays > allWords.length) {
@@ -10,21 +10,22 @@ export function getWordOfTheDay() {
 }
 
 export const allWords = [
-  'salvo',
-  '84npd',
-  'pissy',
-  'snozy',
+  'lllll',
+  'salvo', 
+  'plube',
+  'baldy',
   'rarts',
   'packs',
-  'baldy',
+  'piggy',
   'foden',
   'cruft',
   'matty',
+  '84npd',
   'scran',
   'botty',
   'bunda',
   'roses',
-  'plube',
+  'seesh',
   'nutes',
   'chunky',
   'fryup',
@@ -33,6 +34,7 @@ export const allWords = [
   'honks',
   'tinny',
   'missy',
+  'snozy',
   'flare',
   'penos',
   'balls',
@@ -40,14 +42,13 @@ export const allWords = [
   'goaty',
   'david',
   'pints',
-  'piggy',
   'mario',
+  'pissy',
   'clart',
   'thicc',
   'train',
   'clown',
   'rarta',
-  'seesh',
   'swole',
   'hoggg',
   'bongo',

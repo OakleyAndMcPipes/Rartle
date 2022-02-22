@@ -210,6 +210,7 @@ function genResultGrid() {
     </div>
   </div>
   <Keyboard @key="onKey" :letter-states="letterStates" />
+  <h3>An Oakley & McPipes Production</h3>
 </template>
 
 <style scoped>
