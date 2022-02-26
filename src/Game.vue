@@ -26,7 +26,7 @@ let message = $ref('')
 let grid = $ref('')
 let shakeRowIndex = $ref(-1)
 let success = $ref(false)
-
+let clicked = $ref(false)
 // Keep track of revealed letters for the virtual keyboard
 const letterStates: Record<string, LetterState> = $ref({})
 
@@ -173,7 +173,8 @@ function genResultGrid() {
  function copy() {
     let score =  document.getElementById('score')?.innerHTML;
     let text = message + "\n" + score; 
-      navigator.clipboard.writeText(text);      
+      navigator.clipboard.writeText(text);     
+      clicked = true; 
   }
 </script>
 
@@ -183,10 +184,10 @@ function genResultGrid() {
     <div id="comment" class="message" v-if="message">
       {{ message }}
       <pre v-if="grid" id="score">{{ grid }}</pre>
-      <button v-if="grid" type="button" @click="copy" >Copy!</button>
+      <button class="copy-button" v-if="grid" type="button" @click="copy" >{{ clicked? "Copied!" : "Copy?" }}</button>
     </div>
   </Transition>
-  <header>
+  <header class="header-margin">
     <h1>RARTLE</h1>
   </header>
   <div id="board">
@@ -373,5 +374,41 @@ function genResultGrid() {
   .tile {
     font-size: 3vh;
   }
+}
+
+.header-margin {
+  margin-bottom: 20px;
+}
+
+/* CSS */
+.copy-button {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00D775, #00BD68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 9;
+  border: 0;
+}
+
+.copy-button:hover {
+  background: #00bd68;
 }
 </style>
