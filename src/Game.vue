@@ -169,13 +169,21 @@ function genResultGrid() {
     })
     .join('\n')
 }
+
+ function copy() {
+    let score =  document.getElementById('score')?.innerHTML;
+    let text = message + "\n" + score; 
+      navigator.clipboard.writeText(text);      
+  }
 </script>
+
 
 <template>
   <Transition>
-    <div class="message" v-if="message">
+    <div id="comment" class="message" v-if="message">
       {{ message }}
-      <pre v-if="grid">{{ grid }}</pre>
+      <pre v-if="grid" id="score">{{ grid }}</pre>
+      <button v-if="grid" type="button" @click="copy" >Copy!</button>
     </div>
   </Transition>
   <header>
