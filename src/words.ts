@@ -49,7 +49,6 @@ export const allWords = [
   'flare',
   'clart',
   'giles',
-  'chinny',
   'voice',
   'david',
   'goaty',
@@ -79,6 +78,5 @@ export const allWords = [
   'tramp',
   'botty',
   'pissy',
-  'chunky',
   'peeep'
 ]
